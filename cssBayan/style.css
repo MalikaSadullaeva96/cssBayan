@@ -12,31 +12,51 @@ body {
     font-size: 20px;
 }
 
-ul {
-    list-style-type: none;
-}
 img {
     width: 300px;
     height: 300px;
+}
+
+
+h1 {
+    border-bottom: 1px solid grey;
+    font-weight: 700;
+}
+
+label{
+    cursor: pointer;
 }
 
 .header {
     width: 600px;
 }    
 
-.item, h1 {
+.nav {
     border-bottom: 1px solid grey;
-    font-weight: 700;
-}
-.fa-plus {
-    float: right;
-    font-size: 15px;
+    cursor: pointer;
 }
 
+
+.radio:checked ~ .image{
+    display: flex;
+    justify-content: center;
+}
+  
 .image{
     display: none;
 }
-ul li:hover .image{
+
+.nav:hover .image{
     display: flex;
     justify-content: center;
+}
+
+type[radio] + img {
+    cursor: pointer;
+}
+
+[type=radio] { 
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
