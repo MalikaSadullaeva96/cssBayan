@@ -37,3 +37,9 @@ img {
     display: flex;
     justify-content: center;
 }
+.image{
+    display: none;
+}
+ul li:hover .image{
+    display: block;
+}
