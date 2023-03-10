@@ -17,7 +17,6 @@ img {
     height: 300px;
 }
 
-
 h1 {
     border-bottom: 1px solid grey;
     font-weight: 700;
@@ -36,7 +35,6 @@ label{
     cursor: pointer;
 }
 
-
 .radio:checked ~ .image{
     display: flex;
     justify-content: center;
@@ -44,6 +42,10 @@ label{
   
 .image{
     display: none;
+}
+
+.fa-plus {
+    float: right;
 }
 
 .nav:hover .image{
