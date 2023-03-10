@@ -33,11 +33,9 @@ img {
     font-size: 15px;
 }
 
-.image {
-    display: flex;
-    justify-content: center;
+.image{
+    display: none;
 }
-
 ul li:hover .image{
     display: flex;
     justify-content: center;
