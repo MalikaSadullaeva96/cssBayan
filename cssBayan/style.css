@@ -22,9 +22,6 @@ h1 {
     font-weight: 700;
 }
 
-label{
-    cursor: pointer;
-}
 
 .header {
     width: 650px;
@@ -54,6 +51,11 @@ label{
     transform: rotate(45deg);
     transition: 0.3s;
 }
+
+.header:hover label {
+    color: black;
+}
+
 /*end rotation effect*/
 
 /*Create image appear effect*/
@@ -93,3 +95,15 @@ type[radio] + img {
    opacity: 0.8;
 }
 /*End create click effect*/
+
+/*Add text color*/
+label{
+    cursor: pointer;
+    color: blue;
+}
+
+label:has(> input[checked]) {
+    color: black;
+}
+
+/*end text color*/ 
