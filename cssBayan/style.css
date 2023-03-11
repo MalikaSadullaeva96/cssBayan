@@ -35,22 +35,29 @@ label{
     cursor: pointer;
 }
 
-.radio:checked ~ .image{
-    display: flex;
-    justify-content: center;
-}
-  
-.image{
-    display: none;
-}
-
 .fa-plus {
     float: right;
 }
 
-.nav:hover .image{
+.image{
+    opacity: 0;
+    height: 0;
+}
+
+
+.radio:checked ~ .image{
     display: flex;
     justify-content: center;
+    opacity: 100;
+    height: 300px;
+}
+  
+.nav:hover .image {
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.25s ease-out;  
+    opacity: 1;
+    height: 300px;
 }
 
 type[radio] + img {
