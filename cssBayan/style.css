@@ -94,6 +94,9 @@ type[radio] + img {
 .nav:active:hover {
    opacity: 0.8;
 }
+.nav:active:hover label{
+    color: blue;
+ }
 /*End create click effect*/
 
 /*Add text color*/
