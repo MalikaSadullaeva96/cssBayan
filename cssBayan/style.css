@@ -1,66 +1,54 @@
-*{
+* {
     margin: 0;
     padding: 5px 0;
     font-family: gill sans, sans-serif;
     font-size: 20px;
-    
 }
-
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1em 0;
 }
-
 img {
     width: 5em;
     height: 5em;
 }
-
 h1 {
     border-bottom: 0.05em solid grey;
     font-weight: 700;
 }
-
+.header {
+    width: 13em;
+}  
+.nav {
+    border-bottom: 0.05em solid grey;
+    cursor: pointer;
+}
 /*Add text color*/
 label{
+    display: block;
+    width: 15em;
     cursor: pointer;
     color: blue; 
 }
-
-span {
+span, i {
     font-size: 0.4rem;
 }
-
-i {
-    font-size: 0.4rem;
-}
-
 input[type="radio"]:checked ~span{
     color: black;
 }
 /*end text color*/ 
 
-.header {
-    width: 13em;
-}  
-
-.nav {
-    border-bottom: 0.05em solid grey;
-    cursor: pointer;
-}
 /*Add rotation effect to f plus icon*/
 .fa-plus {
    float: right;
    opacity: 0;
 }
-
-.radio:checked + .fa-plus{
+input:checked + .fa-plus{
     transform: rotate(45deg);
     transition: 0.3s;
 }
-
 .header:hover .fa-plus {
     opacity: 1;
 }
@@ -68,25 +56,15 @@ input[type="radio"]:checked ~span{
     transform: rotate(45deg);
     transition: 0.3s;
 }
-
 .header:hover label {
     color: black;
 }
 /*end rotation effect*/
-
 /*Create image appear effect*/
 .image {
     opacity: 0;
     height: 0;
 }
-
-.radio:checked  ~ .image {
-    display: flex;
-    justify-content: center;
-    opacity: 100;
-    height: 5em;
-}
-
 .nav:hover .image {
     display: flex;
     justify-content: center;
@@ -94,12 +72,16 @@ input[type="radio"]:checked ~span{
     opacity: 1;
     height: 5em;
 }
-
+input:checked  ~.image {
+    display: flex;
+    justify-content: center;
+    opacity: 100;
+    height: 5em;
+}
 /*End image appear effect*/
 type[radio] + img {
     cursor: pointer;
 }
-
 [type=radio] { 
     opacity: 0;
     width: 0;
@@ -109,21 +91,20 @@ type[radio] + img {
 .nav:active:hover {
    opacity: 0.8;
 }
-
 .nav:active:hover label{
     color: blue;
  }
-
  .nav:active:hover span{
     color: blue;
  }
 /*End create click effect*/
 
-
-
-
 /*make responsive*/
  @media(min-width: 320px){
+
+    label{
+        width: 17em;
+    }
 
     .header {
         width: 15em;
@@ -148,9 +129,18 @@ type[radio] + img {
     i{
         font-size: 0.5rem;
     }
+    input:checked  ~.image {
+        display: flex;
+        justify-content: center;
+        opacity: 100;
+        height: 5em;
+    }
 }
-
 @media(min-width: 820px){
+   
+    label{
+        width: 35em;
+    }
 
     .header {
         width: 35em;
@@ -173,10 +163,11 @@ type[radio] + img {
     i{
         font-size: 1rem;
     }
-
 }
-
 @media screen and (min-width: 1920px){
+    label{
+        width: 50em;
+    }
 
     .header {
         width: 50em;
@@ -198,5 +189,6 @@ type[radio] + img {
     i{
         font-size: 1.1rem;
     }
-}
 
+}
+/*end make responsive*/
