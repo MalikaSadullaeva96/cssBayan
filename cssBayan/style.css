@@ -74,7 +74,7 @@ h1 {
 .nav:hover .image {
     display: flex;
     justify-content: center;
-    transition: opacity 0.25s ease-out;  
+    transition: opacity 1s ease-out;  
     opacity: 1;
     height: 5em;
 }
