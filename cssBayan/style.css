@@ -64,7 +64,7 @@ h1 {
     height: 0;
 }
 
-.radio:checked ~ .image {
+.radio:checked  ~ .image {
     display: flex;
     justify-content: center;
     opacity: 100;
@@ -109,10 +109,12 @@ i{
     font-size: 0.4rem;
 }
 
-label:has(> input:checked) {
+/* label:has(> input:checked) {
+    color: black;
+} */
+label:has(input[type="radio"]:checked){
     color: black;
 }
-
 /*end text color*/ 
 
 
@@ -143,9 +145,6 @@ label:has(> input:checked) {
     i{
         font-size: 0.5rem;
     }
-    label:has(> input:checked) {
-        color: black;
-    }
 }
 
 @media(min-width: 820px){
@@ -169,9 +168,6 @@ label:has(> input:checked) {
         font-size: 1em;
     }
 
-    label:has(> input:checked) {
-        color: black;
-    }
 }
 
 @media screen and (min-width: 1920px){
@@ -193,9 +189,5 @@ label:has(> input:checked) {
     label {
         font-size: 1.1em;
     }
-    label:has(> input:checked) {
-        color: black;
-    }
-
 }
 
