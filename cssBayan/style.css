@@ -112,7 +112,7 @@ i{
 /* label:has(> input:checked) {
     color: black;
 } */
-label:has(input[type="radio"]:checked){
+label:has(>input[type="radio"]:checked){
     color: black;
 }
 /*end text color*/ 
