@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    font-family: gill sans, sans-serif;
+    font-size: 20px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+}
+img {
+    width: 3em;
+    height: 3em;
+}
+h1 {
+    border-bottom: 0.05em solid grey;
+    padding-bottom: 0.5em;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.header {
+    width: 13em;
+    height: auto;
+}  
+.nav {
+    border-bottom: 0.05em solid grey;
+    padding: 0.3em 0;
+    cursor: pointer;
+}
+.nav:last-child{
+    border-bottom: none;
+}
+/*Add text color*/
+label{
+    display: block;
+    width: 13em;
+    cursor: pointer;
+    color: blue; 
+}
+span, i, h1 {
+    font-size: 0.4rem;
+}
+input[type="radio"]:checked ~span{
+    color: black;
+}
+/*end text color*/ 
+
+/*Add rotation effect to f plus icon*/
+.fa-plus {
+   float: right;
+   opacity: 0;
+}
+input:checked + .fa-plus{
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+.header:hover .fa-plus {
+    opacity: 1;
+}
+.nav:hover .fa-plus{
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+.header:hover label {
+    color: black;
+}
+/*end rotation effect*/
+/*Create image appear effect*/
+.image {
+    opacity: 0;
+    height: 0;
+    padding: 0.3em 0;
+}
+input:checked  ~.image {
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    height: 3em;
+}
+.nav:hover .image {
+    display: flex;
+    justify-content: center;
+    transition: opacity 1s ease-out;  
+    opacity: 1;
+    height: 3em;
+}
+/*End image appear effect*/
+type[radio] + img {
+    cursor: pointer;
+}
+[type=radio] { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+/*Create click effect*/
+.nav:active:hover {
+   opacity: 0.8;
+}
+.nav:active:hover label{
+    color: blue;
+ }
+ .nav:active:hover span{
+    color: blue;
+ }
+/*End create click effect*/
+
+/*make responsive*/
+ @media(min-width: 320px){
+
+    label{
+        width: 10em;
+    }
+
+    .header {
+        width: 10em;
+    }  
+    
+    img {
+        width: 4em;
+        height: 4em;
+    }
+
+    .radio:checked ~ .image {
+        height: 4em;
+    }
+
+    .nav:hover .image {
+        height: 4em;
+    }
+
+    span, h1, i {
+        font-size: 0.5rem;
+    }
+}
+@media(min-width: 820px){
+   
+    label{
+        width: 30em;
+    }
+
+    .header {
+        width: 30em;
+    }
+    img {
+        width: 10em;
+        height: 10em;
+    }
+    .radio:checked ~ .image {
+        height: 10em;
+    }
+    
+    .nav:hover .image {
+        height: 10em;
+    }
+
+    span, i {
+        font-size: 1rem;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (min-width: 1920px){
+    label{
+        width: 52em;
+    }
+
+    .header {
+        width: 52em;
+    }
+    img {
+        width: 20em;
+        height: 20em;
+    }
+    .radio:checked ~ .image {
+        height: 20em;
+    }
+    
+    .nav:hover .image {
+        height: 20em;
+    }
+    span {
+        font-size: 1.5rem;
+    }
+    h1 {
+        font-size: 2.3rem;
+    }
+    i {
+        font-size: 1.1rem;
+    }
+
+}
+/*end make responsive*/
