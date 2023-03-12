@@ -103,6 +103,9 @@ type[radio] + img {
 label{
     cursor: pointer;
     color: blue;
+    
+}
+span {
     font-size: 0.4rem;
 }
 i{
@@ -112,11 +115,10 @@ i{
 /* label:has(> input:checked) {
     color: black;
 } */
-label:has(input[type="radio"]:checked){
+input[type="radio"]:checked ~span{
     color: black;
 }
 /*end text color*/ 
-
 
 
 /*make responsive*/
@@ -139,7 +141,7 @@ label:has(input[type="radio"]:checked){
         height: 5em;
     }
 
-    label{
+    span, h1 {
         font-size: 0.5rem;
     }
     i{
@@ -164,8 +166,11 @@ label:has(input[type="radio"]:checked){
         height: 15em;
     }
 
-    label {
-        font-size: 1em;
+    span, h1 {
+        font-size: 2em;
+    }
+    i{
+        font-size: 1rem;
     }
 
 }
@@ -186,8 +191,11 @@ label:has(input[type="radio"]:checked){
     .nav:hover .image {
         height: 20em;
     }
-    label {
-        font-size: 1.1em;
+    span, h1 {
+        font-size: 4em;
+    }
+    i{
+        font-size: 1.1rem;
     }
 }
 
