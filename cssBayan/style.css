@@ -13,10 +13,6 @@ body {
     padding: 1em 0;
 }
 
-.header {
-    width: 13em;
-}  
-
 img {
     width: 5em;
     height: 5em;
@@ -27,11 +23,33 @@ h1 {
     font-weight: 700;
 }
 
+/*Add text color*/
+label{
+    cursor: pointer;
+    color: blue; 
+}
+
+span {
+    font-size: 0.4rem;
+}
+
+i {
+    font-size: 0.4rem;
+}
+
+input[type="radio"]:checked ~span{
+    color: black;
+}
+/*end text color*/ 
+
+.header {
+    width: 13em;
+}  
+
 .nav {
     border-bottom: 0.05em solid grey;
     cursor: pointer;
 }
-
 /*Add rotation effect to f plus icon*/
 .fa-plus {
    float: right;
@@ -46,7 +64,6 @@ h1 {
 .header:hover .fa-plus {
     opacity: 1;
 }
-
 .nav:hover .fa-plus{
     transform: rotate(45deg);
     transition: 0.3s;
@@ -55,7 +72,6 @@ h1 {
 .header:hover label {
     color: black;
 }
-
 /*end rotation effect*/
 
 /*Create image appear effect*/
@@ -78,8 +94,8 @@ h1 {
     opacity: 1;
     height: 5em;
 }
-/*End image appear effect*/
 
+/*End image appear effect*/
 type[radio] + img {
     cursor: pointer;
 }
@@ -89,36 +105,21 @@ type[radio] + img {
     width: 0;
     height: 0;
 }
-
 /*Create click effect*/
 .nav:active:hover {
    opacity: 0.8;
 }
+
 .nav:active:hover label{
+    color: blue;
+ }
+
+ .nav:active:hover span{
     color: blue;
  }
 /*End create click effect*/
 
-/*Add text color*/
-label{
-    cursor: pointer;
-    color: blue;
-    
-}
-span {
-    font-size: 0.4rem;
-}
-i{
-    font-size: 0.4rem;
-}
 
-/* label:has(> input:checked) {
-    color: black;
-} */
-input[type="radio"]:checked ~span{
-    color: black;
-}
-/*end text color*/ 
 
 
 /*make responsive*/
@@ -167,7 +168,7 @@ input[type="radio"]:checked ~span{
     }
 
     span, h1 {
-        font-size: 2em;
+        font-size: 1em;
     }
     i{
         font-size: 1rem;
@@ -192,7 +193,7 @@ input[type="radio"]:checked ~span{
         height: 20em;
     }
     span, h1 {
-        font-size: 4em;
+        font-size: 1.5em;
     }
     i{
         font-size: 1.1rem;
