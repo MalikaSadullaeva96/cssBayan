@@ -112,7 +112,7 @@ i{
 /* label:has(> input:checked) {
     color: black;
 } */
-label:has(>input[type="radio"]:checked){
+label:has(input[type="radio"]:checked){
     color: black;
 }
 /*end text color*/ 
@@ -145,9 +145,6 @@ label:has(>input[type="radio"]:checked){
     i{
         font-size: 0.5rem;
     }
-    label:has(>input[type="radio"]:checked){
-        color: black;
-    }
 }
 
 @media(min-width: 820px){
@@ -170,9 +167,6 @@ label:has(>input[type="radio"]:checked){
     label {
         font-size: 1em;
     }
-    label:has(>input[type="radio"]:checked){
-        color: black;
-    }
 
 }
 
@@ -194,9 +188,6 @@ label:has(>input[type="radio"]:checked){
     }
     label {
         font-size: 1.1em;
-    }
-    label:has(>input[type="radio"]:checked){
-        color: black;
     }
 }
 
